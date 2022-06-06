@@ -59,6 +59,12 @@ class AssignmentApis extends Controller {
         echo($message);
     }
 
+    public function randomTeam($students) {
+        // $students = array('1', '2', '3');
+        shuffle($students);
+        $result = array_chunk($students, 2);    
+        echo($result);
+    }
 
     
 }
