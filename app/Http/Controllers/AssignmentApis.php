@@ -54,8 +54,9 @@ class AssignmentApis extends Controller {
 
 
     public function dadJoke(){
-        $response = file_get_contents('https://icanhazdadjoke.com/slack');
-        json_decode($response);
+        //$response = file_get_contents('https://icanhazdadjoke.com/slack');
+        $message = json_decode(file_get_contents('https://icanhazdadjoke.com/slack'), true)["attachments"][0]["text"];
+        echo($message);
     }
 
 
